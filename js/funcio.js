@@ -8,15 +8,14 @@ function convert(){
     si hi ha un error mos fara una altra funcio on sortira un alert...*/
 }
 function cercar(){
-    
-    //$('filaresultat').remove();
+    $(".filaresultat").remove();
     var tag = convert();
-    onclick = $.ajax({
+    $.ajax({
         url: "https://api.flickr.com/services/feeds/photos_public.gne",
-        type: 'Get',
-        async: 'true',
+        type: 'GET',
+        async: true,
         dataType: 'json',
-        data: 'tags='+ $('#tag').val()+'&tagmode='+$('#tipus').val()+'format=json&jsoncallback=?',
+        data: 'tags='+ $('#tag').val()+'&tagmode='+$('#tipus').val()+'&format=json&jsoncallback=?',
         success: mostrar,
         error: function(jqXHR, exception){
             alert(JSON.parse(jqXHR.responseText));
@@ -26,15 +25,14 @@ function cercar(){
 }
 function mostrar(data){
     $.each(data.items, function(i, item){
-        var fila = $("<tr class='filaresultat'><td>"+
+        var fila = $("<tr class='filaresultat' align='center'><td>"+
                     '<h4>'+item.title+'</h4></td>'+
                     '<td><a href ="'+item.link+'"></a></td>'+
                     '<td><img src='+item.media.m+'></td>'+
-                    '<td><p'+item.published.substr(-10)+'</p></td>'+
-                    '<td><p'+item.author+'</p></td>'+
-                    '<td><i'+item.tags+'></i></td>'+
+                    '<td><p>'+item.published.substr(-10)+'</p></td>'+
+                    '<td><p>'+item.author+'</p></td>'+
+                    '<td><i>'+item.tags+'</i></td>'+
                     "</tr>");
-        
         $('#esquema').append(fila);
     })
 }

@@ -6,6 +6,7 @@
     <title>Eliminar i afegir alumnes a una taula</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estils.css"/>
     <!--<link rel="stylesheet" type="text/css" media="screen" href="css/estils.css"/>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/funcio.js"></script>
@@ -13,7 +14,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
-<body class="fons">
+<body class="fondo">
     
     <div align="center">
         <form onsubmit="return cercar()" class="form"><!--Estructura del formulari-->
@@ -34,8 +35,8 @@
         </form>
     </div>
     <div>
-        <table id="esquema" class="taula" width="65%" align="center"><!--Capçalera de la taula que resultarà-->
-            <tr>
+        <table id="esquema" class="taula-ajax" align="center" cellspacing="10" cellpadding="10" width="80%"><!--Capçalera de la taula que resultarà-->
+            <tr align="center">
                 <th>Títol</th>
                 <th>Direcció</th>
                 <th>Imatge</th>
