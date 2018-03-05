@@ -8,6 +8,12 @@
     color: floralwhite;
     border-color: cornsilk;
     background-color: rgb(11,34,30);
+    width: 85%;
+}
+h2{
+    background-color: rgb(11,34,30);
+    color: white;
+    
 }
 .fondo{
     background-image:url('mosaico-fons.jpg');
@@ -20,4 +26,7 @@
 }
 i{
     font-size: 12px;
+}
+h4{
+    font-size: 15px;
 }

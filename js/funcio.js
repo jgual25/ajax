@@ -27,7 +27,7 @@ function mostrar(data){
     $.each(data.items, function(i, item){
         var fila = $("<tr class='filaresultat' align='center'><td>"+
                     '<h4>'+item.title+'</h4></td>'+
-                    '<td><a href ="'+item.link+'"></a></td>'+
+                    '<td>'+item.link.substr(8)+'</td>'+
                     '<td><img src='+item.media.m+'></td>'+
                     '<td><p>'+item.published.substr(-10)+'</p></td>'+
                     '<td><p>'+item.author+'</p></td>'+
