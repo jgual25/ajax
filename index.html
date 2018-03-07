@@ -19,21 +19,21 @@
     <div align="center">
         <form onsubmit="return cercar()" class="form"><!--Estructura del formulari-->
             <div>
-                <h2 class="titol">Cercar Fotografies</h3>
+                <h2 class="titol">Cerca de Fotografies</h3>
             </div>
             <div>
-                <input id="tag" type="text" class="etiqueta" required>
+                <input id="tag" type="text" class="form-control" required>
             </div>
             <div>
-            <select id="tipus" type="option" class="dins" required>
+            <select id="tipus" type="option" class="form-control" required>
                 <option value="all"> Totes </option>
                 <option value="any"> Algunes </option>
-            </div>
+            </div><br>
             <div>
-                <input type="submit" class="boto" value="Buscar"><!--botó que llança la funció per insertar una fila a la taula després d'haver omplit el formulari-->
-            </div>
+    <input type="submit" class="btn-default" value="Buscar"><!--botó que llança la funció per insertar una fila a la taula després d'haver omplit el formulari-->
+            </div><br>
         </form>
-    </div>
+    </div><br>
     <div>
         <table id="esquema" class="taula-ajax table table-responsive" align="center" cellspacing="10" cellpadding="10" width="85%"><!--Capçalera de la taula que resultarà-->
             <tr>

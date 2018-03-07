@@ -29,7 +29,7 @@ function mostrar(data){
                     '<h4>'+item.title+'</h4></td>'+
                     '<td>'+item.link.substr(8)+'</td>'+
                     '<td><img src='+item.media.m+'></td>'+
-                    '<td><p>'+item.published.substr(-10)+'</p></td>'+
+                    '<td><p><i>'+item.published.substr(-10)+'</i></p></td>'+
                     '<td><p>'+item.author+'</p></td>'+
                     '<td><i>'+item.tags+'</i></td>'+
                     "</tr>");
