@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/estils.css"/>
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/estils.css"/>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/funcio.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -17,26 +16,26 @@
 <body class="fondo">
     
     <div align="center">
-        <form onsubmit="return cercar()" class="form"><!--Estructura del formulari-->
+        <form onsubmit="return cercar()" class="form"><!--Estructura del formulari que al clicar dispara la funció cercar() del JS-->
             <div>
                 <h2 class="titol">Cerca de Fotografies</h3>
             </div>
             <div>
-                <input id="tag" type="text" class="form-control" required>
+                <input id="tag" type="text" class="form-control" required><!--input que permet escriure el tema sobre el que cercar les fotografies-->
             </div>
             <div>
-            <select id="tipus" type="option" class="form-control" required>
+            <select id="tipus" type="option" class="form-control" required><!--selector que permetrà cercar totes o algunes fotografies-->
                 <option value="all"> Totes </option>
                 <option value="any"> Algunes </option>
             </div><br>
             <div>
-    <input type="submit" class="btn-default" value="Buscar"><!--botó que llança la funció per insertar una fila a la taula després d'haver omplit el formulari-->
+    <input type="submit" class="btn-default" value="Buscar"><!--botó que llança la funció per insertar una fila a la taula-->
             </div><br>
         </form>
     </div><br>
     <div>
         <table id="esquema" class="taula-ajax table table-responsive" align="center" cellspacing="10" cellpadding="10" width="85%"><!--Capçalera de la taula que resultarà-->
-            <tr>
+            <tr><!--taula que integra les columnes sobre les que s'integrerà la informació a través de l'ajax-->
                 <th align="center">Títol</th>
                 <th align="center">Direcció</th>
                 <th align="center">Imatge</th>
